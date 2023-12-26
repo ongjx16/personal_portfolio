@@ -4,6 +4,7 @@ import Header from './components/Header'
 import dp from '../../public/dp.svg'
 import Button from './components/Button'
 import { ButtonPurpose } from './utils/ButtonPurpose'
+import Footer from './components/Footer'
 
 export default function Home() {
   return (
@@ -14,9 +15,14 @@ export default function Home() {
         <text className=" pt-5 text-2xl md:text-5xl text-center font-semibold">hi! i’m jing xuan, an aspiring <text className="text-blue-500">software engineer</text> x <text className="text-red-300">product designer</text>!</text>
         {/* check out my works */}
         <div className=" w-full text-center pt-5 pb-2 italic text-sm">check out my works...</div>
-        <div className=" w-full flex flex-row justify-around ">
-          <Button text="software projects" purpose={ButtonPurpose.Software} link="/software" />
-          <Button text="design projects" purpose={ButtonPurpose.Design} link="/design" />
+        <div className=" w-full flex flex-row">
+          <div className='flex-grow flex-shrink flex-1'></div>
+          <div className='flex-grow flex-shrink flex-2 flex flex-row justify-around'>
+            <Button text="software projects" purpose={ButtonPurpose.Software} link="/software" />
+            <Button text="design projects" purpose={ButtonPurpose.Design} link="/design" />
+          </div>
+          <div className='flex-grow flex-shrink flex-1'></div>
+
         </div>
         {/* ...and my experiences */}
         <div className=" w-full text-center pt-5 pb-2 italic text-sm">...and my experiences!</div>
@@ -41,6 +47,7 @@ export default function Home() {
 
         </div>
       </div>
+      <Footer />
     </div>
   )
 

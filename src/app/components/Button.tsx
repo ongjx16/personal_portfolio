@@ -23,7 +23,7 @@ import { ButtonPurpose } from "../utils/ButtonPurpose";
       const buttonClass = getButtonClass(purpose);
     
       const renderLinkContent = () => (
-        <div className={`w-32 md:w-48 h-max text-center py-2 px-4 rounded rounded-xl shadow-[2px_5px_5px_1px_rgba(0,0,0,0.1)] ${buttonClass}`}>
+        <div className={`w-36 md:w-64 h-max text-center py-2 md:py-4 px-4 rounded rounded-xl shadow-[2px_5px_5px_1px_rgba(0,0,0,0.1)] ${buttonClass}`}>
           {text}
         </div>
       );
