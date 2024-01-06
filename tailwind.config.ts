@@ -8,6 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        xs:'0.6rem',
+        sm: '0.7rem',
+        base: '0.9rem',
+        xl: '1.25rem',
+        '2xl': '1.563rem',
+        '3xl': '1.953rem',
+        '4xl': '2.441rem',
+        '5xl': '3.052rem',
+      },
       fontFamily: {
           epilogue: ['epilogue', 'sans-serif'],
       },
@@ -18,6 +28,7 @@ const config: Config = {
           300: "#EA9A93" //design red
         },
         blue: {
+          300: "#D5DDFB",
           500: "#758FF0", //software blue 
         },
 
