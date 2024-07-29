@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import githubpic from "../../../public/github.svg"
+import githubpic from "../../../public/icons/github.svg"
 
 interface SoftwareProps {
     title: string;
@@ -10,6 +10,7 @@ interface SoftwareProps {
     subheader: string;
     year: string;
     github: string;
+    large: boolean;
 }
 
 const indivSkill = (skill: string) => (
@@ -29,9 +30,9 @@ const indivSkill = (skill: string) => (
   )
 
 
-export default function SoftwareProj({ title, img, technologies, header, subheader, year, github }: SoftwareProps) {
+export default function SoftwareProj({ title, img, technologies, header, subheader, year, github, large}: SoftwareProps) {
     return (
-        <div className="w-64 h-max bg-white text-center rounded rounded-xl shadow-[2px_5px_5px_1px_rgba(0,0,1,0.1)] flex flex-col">
+        <div className={`${large === true ? 'w-96' : 'w-64'} h-max bg-white text-center rounded rounded-xl shadow-[2px_5px_5px_1px_rgba(0,0,1,0.1)] flex flex-col overflow-hidden`}>
             {/* image div */}
             <div className="flex flex-4 relative">
                 <div className="absolute bg-red-300 z-10 h-7 py-1 px-1.5 rounded-lg shadow shadow-[2px_3px_0px_0px_rgba(117,80,76,1)] right-2 top-2">
@@ -39,7 +40,7 @@ export default function SoftwareProj({ title, img, technologies, header, subhead
                         <Image src={githubpic} alt="email" className="h-full" />
                     </a>
                 </div>
-                <div className="absolute text-white text-xl font-semibold z-10 rounded-lg right-2 bottom-0">
+                <div className="absolute text-white text-2xl font-medium z-10 rounded-lg right-2 bottom-0">
                     <p>{title}</p>
                 </div>
                 {<Image src={img} alt="projectImage"
@@ -60,7 +61,6 @@ export default function SoftwareProj({ title, img, technologies, header, subhead
                 </div>
                 
             </div>
-
             {/* title, description, technologies */}
         </div>
     );

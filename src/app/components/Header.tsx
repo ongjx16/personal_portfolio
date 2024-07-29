@@ -1,9 +1,9 @@
 'use client';
 
 import Link from "next/link"
-import menu from "../../../public/menu.svg"
+import menu from "../../../public/icons/menu.svg"
 import Image from "next/image"
-import logo from "../../../public/logo.svg"
+import logo from "../../../public/icons/logo.svg"
 import Sidebar from "./Sidebar"
 import { useState } from "react"
 
