@@ -9,12 +9,13 @@ interface DesignProps {
     year: string;
     content: boolean;
     large: boolean;
+    link: string;
 }
 
 
-export default function DesignProj({ title, img, header, subheader, year, content, large}: DesignProps) {
+export default function DesignProj({ title, img, header, subheader, year, content, large, link}: DesignProps) {
     return (
-        <div className="w-max h-max relative">
+        <a className="w-max h-max relative" href= {link}>
             {/* todo: change opacity */}
             <div className={`${large === true ? 'w-96' : 'w-64'} ${content === true ? '' : 'opacity-70'}h-max bg-white text-center rounded rounded-xl shadow-[2px_5px_5px_1px_rgba(0,0,1,0.1)] flex flex-col`}>
                 <div className="flex flex-4 relative">
@@ -38,7 +39,7 @@ export default function DesignProj({ title, img, header, subheader, year, conten
 
                 {/* title, description, technologies */}
             </div>
-        </div>
+        </a>
 
     );
 

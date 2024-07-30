@@ -38,6 +38,8 @@ export default function Page() {
           projects
         </p>
 
+        <p>TODO: add proper links for hikepal, silverfun, benchsafe, datamarketplace!!!!!!!</p>
+
         {/* projects [small screens] */}
         <div className={`w-max relative flex flex-grow ${isMediumScreen && designContent.length%2===0 ? `pb-32`: `pb-0`}`}>
           <div className={`py-8 grid md:grid-cols-2 gap-y-8 gap-x-20 flex flex-grow`}>
@@ -58,6 +60,7 @@ export default function Page() {
                   subheader={project.subheader}
                   year={project.year}
                   content = {project.content}
+                  link = {project.link}
                   large = {isMediumScreen ? true : false}
                 />
               </div>

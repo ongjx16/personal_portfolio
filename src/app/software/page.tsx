@@ -61,6 +61,7 @@ export default function Page() {
                   subheader={project.subheader}
                   year={project.year}
                   github={project.github}
+                  link = {project.link}
                   large={isMediumScreen ? true : false}
                 />
               </div>

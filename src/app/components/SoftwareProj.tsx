@@ -1,6 +1,6 @@
-import Link from "next/link"
 import Image from "next/image"
 import githubpic from "../../../public/icons/github.svg"
+import React from 'react';
 
 interface SoftwareProps {
     title: string;
@@ -11,7 +11,10 @@ interface SoftwareProps {
     year: string;
     github: string;
     large: boolean;
+    link: string;
 }
+
+
 
 const indivSkill = (skill: string) => (
     <div className="h-max w-max py-0.5 items-center px-1.5 bg-blue-300 rounded-lg text-xs">
@@ -29,10 +32,9 @@ const indivSkill = (skill: string) => (
     </div>
   )
 
-
-export default function SoftwareProj({ title, img, technologies, header, subheader, year, github, large}: SoftwareProps) {
+export default function SoftwareProj({ title, img, technologies, header, subheader, year, github, large, link}: SoftwareProps) {
     return (
-        <div className={`${large === true ? 'w-96' : 'w-64'} h-max bg-white text-center rounded rounded-xl shadow-[2px_5px_5px_1px_rgba(0,0,1,0.1)] flex flex-col overflow-hidden`}>
+        <a className={`${large === true ? 'w-96' : 'w-64'} h-max bg-white text-center rounded rounded-xl shadow-[2px_5px_5px_1px_rgba(0,0,1,0.1)] flex flex-col overflow-hidden`} href={link}>
             {/* image div */}
             <div className="flex flex-4 relative">
                 <div className="absolute bg-red-300 z-10 h-7 py-1 px-1.5 rounded-lg shadow shadow-[2px_3px_0px_0px_rgba(117,80,76,1)] right-2 top-2">
@@ -62,7 +64,7 @@ export default function SoftwareProj({ title, img, technologies, header, subhead
                 
             </div>
             {/* title, description, technologies */}
-        </div>
+        </a>
     );
 
 }

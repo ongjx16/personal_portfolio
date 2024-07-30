@@ -12,20 +12,22 @@ export const softwareContent = [
     {
         title: "HeadHome",
         img: headhomecover,
-        technologies: ["Flutter", "Dart", "Firebase", "Google Cloud Platform"], 
+        technologies: ["Flutter", "Dart", "Firebase", "Google Cloud Platform"],
         header: "app x watch for dementia patients",
         subheader: "Global Champion; Google Solutions Challenge 2023",
         year: "2023",
-        github: "https://github.com/ongjx16/HeadHome"
+        github: "https://github.com/ongjx16/HeadHome",
+        link: "/project/headhome",
     },
     {
         title: "Grass Rendering",
         img: grasscover,
-        technologies: ["Unity", "GPU Optimisation", "Vertex Shading", "Texture Rendering"], 
+        technologies: ["Unity", "GPU Optimisation", "Vertex Shading", "Texture Rendering"],
         header: "grass render with realistic motion simulation",
         subheader: "UC Berkeley CS184 Computer Graphics Final Project",
         year: "2024",
-        github: "https://github.com/ongjx16/cs184-finalproject"
+        github: "https://github.com/ongjx16/cs184-finalproject",
+        link: "https://github.com/ongjx16/cs184-finalproject",
     },
     {
         title: "BenchSafe",
@@ -34,7 +36,8 @@ export const softwareContent = [
         header: "body measurement app for IOT project",
         subheader: "coursework",
         year: "2023",
-        github: "https://github.com/ongjx16/BenchSafe"
+        github: "https://github.com/ongjx16/BenchSafe",
+        link: "https://github.com/ongjx16/BenchSafe",
     },
     {
         title: "SmartUrl",
@@ -43,7 +46,8 @@ export const softwareContent = [
         header: "url shortener",
         subheader: "Take-Home Assessment",
         year: "2023",
-        github: "https://github.com/ongjx16/SmartURL"
+        github: "https://github.com/ongjx16/SmartURL",
+        link: "https://github.com/ongjx16/SmartURL",
     },
     {
         title: "SilverFun",
@@ -52,16 +56,18 @@ export const softwareContent = [
         header: "one stop platform for eldercare services",
         subheader: "coursework",
         year: "2022",
-        github: "https://github.com/ongjx16/silverfun-webapp"
+        github: "https://github.com/ongjx16/silverfun-webapp",
+        link: "https://github.com/ongjx16/silverfun-webapp",
     },
     {
         title: "MovieApp",
         img: headhomecover,
-        technologies: ["Java", "OOP"], 
+        technologies: ["Java", "OOP"],
         header: "Java movie booking console-based app",
         subheader: "School Project",
         year: "2023",
-        github: "https://github.com/ongjx16/MovieApp"
+        github: "https://github.com/ongjx16/MovieApp",
+        link: "https://github.com/ongjx16/MovieApp",
     },
 
 ]
@@ -74,7 +80,8 @@ export const designContent = [
         subheader: "Global Champion; Google Solutions Challenge 2023",
         year: "2023",
         content: true,
-        hidden: false
+        hidden: false,
+        link: "/project/headhome",
     },
     {
         title: "HikePal",
@@ -83,7 +90,8 @@ export const designContent = [
         subheader: "UC Berkeley Human-Centered Design Final Project",
         year: "2024",
         content: true,
-        hidden: false
+        hidden: false,
+        link: "",
     },
     {
         title: "bio.me",
@@ -92,7 +100,8 @@ export const designContent = [
         subheader: "Hackathon Submission [Top 10]",
         year: "2023",
         content: true,
-        hidden: false
+        hidden: false,
+        link: "/project/biome",
     },
     {
         title: "BenchSafe",
@@ -101,7 +110,8 @@ export const designContent = [
         subheader: "School Project",
         year: "2023",
         content: true,
-        hidden: false
+        hidden: false,
+        link: "",
     },
     {
         title: "SilverFun",
@@ -110,7 +120,8 @@ export const designContent = [
         subheader: "School Project",
         year: "2022",
         content: false,
-        hidden: false
+        hidden: false,
+        link: "",
     },
     {
         title: "Data Marketplace",
@@ -119,7 +130,8 @@ export const designContent = [
         subheader: "2022 Internship Project",
         year: "2022",
         content: false,
-        hidden: false
+        hidden: false,
+        link: "",
     },
 
 ]

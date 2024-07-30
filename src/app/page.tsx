@@ -1,3 +1,4 @@
+
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from './components/Header'
@@ -36,12 +37,12 @@ export default function Home() {
 
         </div>
         {/* what im up to these days  */}
-        <div className=" w-full flex flex-col text-left pt-5 pb-2 italic text-base">
-          <p className="pb-1">What I’m up to these days:</p>
+        <div className=" w-full flex flex-col text-left pt-5 pb-2 italic text-center">
+          {/* <p className="pb-1">What I’m up to these days:</p>
           <p >- exploring USA 🚗 (I’m currently on a year-long exchange in Berkeley!)</p>
           <p >- looking for a summer 2024 internship</p>
           <p >- learning VR game development in Unity 👩🏻‍💻</p>
-          <p>... and seeing where life takes me! :-)</p>
+          <p>... and seeing where life takes me! :-)</p> */}
 
           <p className="pt-2.5">Feel free to contact me for any opportunities, queries or feedback!</p>
 
