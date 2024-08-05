@@ -6,11 +6,11 @@ import { notFound } from 'next/navigation';
 
 
 // Mock function to simulate fetching profile data
-export interface CaseStudy {
+interface CaseStudy {
   name: string;
   content: string;
 }
-export const CaseStudyData: { [key: string]: CaseStudy } = {
+const CaseStudyData: { [key: string]: CaseStudy } = {
   'headhome': { name: 'HeadHome', content: 'HeadHome' },
   'biome': { name: 'bio.me', content: 'Biome' },
 };
@@ -42,11 +42,11 @@ const ProjTemplate = async ({ params }: caseStudyPageProps) => {
       <main className="flex-grow">
         <div className="w-full flex justify-center flex-col items-center mt-10 md:mt-20 px-8 md:px-30">
           {/* to do: add view other works navigation */}
-          <p className="pt-5 text-2xl md:text-5xl text-center font-semibold">
+          <p className="w-full items-center pt-5 text-5xl md:text-6xl text-center font-medium">
             {caseStudy.name}
           </p>
           <div className="py-8">
-            <BioComponent/>
+            <BioComponent />
           </div>
         </div>
       </main>

@@ -9,23 +9,27 @@ import React, { useState, useEffect, useRef } from 'react';
 export default function Page() {
   const [height, setHeight] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
-  const [isMediumScreen, setIsMediumScreen] = useState(window.innerWidth >= 768);
+  const [isMediumScreen, setIsMediumScreen] = useState(false);
   console.log(height);
 
-  // Function to update screen size state
-  const handleResize = () => {
-    setIsMediumScreen(window.innerWidth >= 768);
-  };
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
+    // This will only run on the client side
+    const handleResize = () => {
+      setIsMediumScreen(window.innerWidth >= 768);
+    };
 
-    if (ref.current) {
-      setHeight(ref.current.clientHeight / 2);
+    if (typeof window !== 'undefined') {
+      setIsMediumScreen(window.innerWidth >= 768);
+      window.addEventListener('resize', handleResize);
+
+      if (ref.current) {
+        setHeight(ref.current.clientHeight / 2);
+      }
+
+      // Cleanup
+      return () => window.removeEventListener('resize', handleResize);
     }
-
-    // Cleanup
-    return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
     <div className='bg-white w-full min-h-screen text-black flex flex-col'>
@@ -41,30 +45,31 @@ export default function Page() {
         <p>TODO: add proper links for hikepal, silverfun, benchsafe, datamarketplace!!!!!!!</p>
 
         {/* projects [small screens] */}
-        <div className={`w-max relative flex flex-grow ${isMediumScreen && designContent.length%2===0 ? `pb-32`: `pb-0`}`}>
+        <div className={`w-max relative flex flex-grow ${isMediumScreen && designContent.length % 2 === 0 ? `pb-32` : `pb-0`}`}>
           <div className={`py-8 grid md:grid-cols-2 gap-y-8 gap-x-20 flex flex-grow`}>
-          {isMediumScreen && (
-          <div className="absolute inset-y-10 left-1/2 border-l border-gray-400"></div>
-        )}
+            {isMediumScreen && (
+              <div className="absolute inset-y-10 left-1/2 border-l border-gray-400"></div>
+            )}
             {designContent.map((project, index) => {
               return (
-              <div key={index} ref={index === 0 ? ref : null} className={`flex items-center ${index % 2 === 0 ? '' : 'md:transform'}`}
-              style={{
-                transform: index % 2 !== 0 && isMediumScreen ? `translateY(${height / 16}rem)` : ''
-              }}
-              >
-                <DesignProj
-                  title={project.title}
-                  img={project.img}
-                  header={project.header}
-                  subheader={project.subheader}
-                  year={project.year}
-                  content = {project.content}
-                  link = {project.link}
-                  large = {isMediumScreen ? true : false}
-                />
-              </div>
-            )})}
+                <div key={index} ref={index === 0 ? ref : null} className={`flex items-center ${index % 2 === 0 ? '' : 'md:transform'}`}
+                  style={{
+                    transform: index % 2 !== 0 && isMediumScreen ? `translateY(${height / 16}rem)` : ''
+                  }}
+                >
+                  <DesignProj
+                    title={project.title}
+                    img={project.img}
+                    header={project.header}
+                    subheader={project.subheader}
+                    year={project.year}
+                    content={project.content}
+                    link={project.link}
+                    large={isMediumScreen ? true : false}
+                  />
+                </div>
+              )
+            })}
           </div>
         </div>
 

@@ -20,16 +20,6 @@ export const softwareContent = [
         link: "/project/headhome",
     },
     {
-        title: "Grass Rendering",
-        img: grasscover,
-        technologies: ["Unity", "GPU Optimisation", "Vertex Shading", "Texture Rendering"],
-        header: "grass render with realistic motion simulation",
-        subheader: "UC Berkeley CS184 Computer Graphics Final Project",
-        year: "2024",
-        github: "https://github.com/ongjx16/cs184-finalproject",
-        link: "https://github.com/ongjx16/cs184-finalproject",
-    },
-    {
         title: "BenchSafe",
         img: benchsafecover,
         technologies: ["Next.js", "Tensorflow.js", "Javascript"],
@@ -38,6 +28,16 @@ export const softwareContent = [
         year: "2023",
         github: "https://github.com/ongjx16/BenchSafe",
         link: "https://github.com/ongjx16/BenchSafe",
+    },
+    {
+        title: "Grass Rendering",
+        img: grasscover,
+        technologies: ["Unity", "GPU Optimisation", "Vertex Shading", "Texture Rendering"],
+        header: "grass render with realistic motion simulation",
+        subheader: "UC Berkeley CS184 Computer Graphics Final Project",
+        year: "2024",
+        github: "https://github.com/ongjx16/cs184-finalproject",
+        link: "https://cal-cs184-student.github.io/hw-webpages-sp24-chayhuixiang/Final%20Project/index.html",
     },
     {
         title: "SmartUrl",

@@ -31,7 +31,7 @@ export default function Home() {
           <Button text="resume" purpose={ButtonPurpose.Standard} link="https://drive.google.com/file/d/1HV2TS7l71OZbzhNYvfVcjHzhdf8zyltL/view?usp=drive_link" />
         </div>
         <div className=" w-full flex flex-col text-center pt-5 italic text-sm">
-          <p className="pb-0.5">Undergraduate (3rd Year)</p>
+          <p className="pb-0.5">Penultimate (4th Year)</p>
           <p className="pb-0.5">Bachelor’s in <text className="font-bold">Computer Science</text> & Masters in <text className="font-bold">Technology Management</text></p>
           <p> Nanyang Technological University  |  University of California, Berkeley</p>
 
@@ -44,9 +44,10 @@ export default function Home() {
           <p >- learning VR game development in Unity 👩🏻‍💻</p>
           <p>... and seeing where life takes me! :-)</p> */}
 
-          <p className="pt-2.5">Feel free to contact me for any opportunities, queries or feedback!</p>
+
 
         </div>
+        <p className="pt-2.5">Feel free to contact me for any opportunities, queries or feedback!</p>
       </div>
       <Footer />
     </div>
