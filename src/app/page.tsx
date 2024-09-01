@@ -12,8 +12,8 @@ export default function Home() {
     <div className='bg-white w-full min-h-screen text-black flex flex-col'>
       <Header />
       <div className=" w-full flex justify-center flex-col justify-start h-full items-center mt-10 md:mt-20  px-8 md:px-40">
-        <Image src={dp} alt="profilepic" className="h-48 md:h-64" />
-        <text className=" pt-5 text-2xl md:text-5xl text-center font-semibold">hi! i’m jing xuan, an aspiring <text className="text-blue-500">software engineer</text> x <text className="text-red-300">product designer</text>!</text>
+        <Image src={dp} alt="profilepic" loading = "eager" className="h-48 md:h-64" />
+        <text className=" pt-5 text-2xl md:text-4xl text-center font-semibold">hi! i’m jing xuan, an aspiring <text className="text-blue-500">software engineer</text> with a passion for human-centered <text className="text-red-300"> design</text>!</text>
         {/* check out my works */}
         <div className=" w-full text-center pt-5 pb-2 italic text-base">check out my works...</div>
         <div className=" w-full flex flex-row">
@@ -28,7 +28,7 @@ export default function Home() {
         {/* ...and my experiences */}
         <div className=" w-full text-center pt-5 pb-2 italic text-base">...and my experiences!</div>
         <div className="">
-          <Button text="resume" purpose={ButtonPurpose.Standard} link="https://drive.google.com/file/d/1HV2TS7l71OZbzhNYvfVcjHzhdf8zyltL/view?usp=drive_link" />
+          <Button text="resume" purpose={ButtonPurpose.Standard} link="https://drive.google.com/file/d/1lzpeDnws2QGhqLj0tcC-pihloVZqEF7Y/view?usp=sharing" />
         </div>
         <div className=" w-full flex flex-col text-center pt-5 italic text-sm">
           <p className="pb-0.5">Penultimate (4th Year)</p>
